@@ -1,0 +1,213 @@
+:root {
+    --font-family: Geist;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-grey: #71717A;
+    --color-border: #E4E4E7;
+    --font-size-16: 16px;
+    --font-size-24: 24px;
+    --font-size-30: 30px;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --padding-2: 2px;
+    --padding-4: 4px;
+    --padding-8: 8px;
+    --padding-16: 16px;
+    --gap-8: 8px;
+    --gap-16: 16px;
+    --border-radius-8: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-400);
+}
+
+body {
+    height: 100dvh;
+    overflow: hidden;
+}
+
+.Flex {
+    display: flex;
+}
+
+.FlexCol {
+    display: flex;
+    flex-direction: column;
+}
+
+.Center {
+    align-items: center;
+}
+
+.JustifyBetween {
+    justify-content: space-between;
+}
+
+.Grow {
+    flex-grow: 1;
+}
+
+.NoShrink {
+    flex-shrink: 0;
+}
+
+.Padding2 {
+    padding: var(--padding-2);
+    padding-left: var(--padding-4);
+    padding-right: var(--padding-4);
+}
+
+.Padding4 {
+    padding: var(--padding-4);
+    padding-left: var(--padding-8);
+    padding-right: var(--padding-8);
+}
+
+.Padding8 {
+    padding: var(--padding-8);
+}
+
+.Padding16 {
+    padding: var(--padding-16);
+}
+
+.Gap8 {
+    gap: var(--gap-8);
+}
+
+.Gap16 {
+    gap: var(--gap-16);
+}
+
+.Font24 {
+    font-size: var(--font-size-24);
+}
+
+.Font30 {
+    font-size: var(--font-size-30);
+}
+
+.Font500 {
+    font-weight: var(--font-weight-500);
+}
+
+.Font600 {
+    font-weight: var(--font-weight-600);
+}
+
+.Font700 {
+    font-weight: var(--font-weight-700);
+}
+
+.FontGrey {
+    color: var(--color-grey);
+}
+
+.FontCenter {
+    text-align: center;
+}
+
+.BlackBG {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.GreyBG {
+    background-color: var(--color-border);
+}
+
+.BorderRadius8 {
+    border-radius: var(--border-radius-8);
+}
+
+.Border {
+    border-radius: var(--border-radius-8);
+    border: 1px solid var(--color-border);
+}
+
+.BorderDashed {
+    border-radius: var(--border-radius-8);
+    border: 1px dashed var(--color-border);
+}
+
+.LeftPanel {
+    border-right: 1px solid var(--color-border);
+    height: 100dvh;
+}
+
+.LeftPanelMiddle {
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    height: inherit;
+}
+
+.Main {
+    overflow-y: scroll;
+}
+
+.Button:hover {
+    cursor: pointer;
+    background-color: var(--color-border);
+    transition: 0.2s;
+}
+
+.Button:active,
+.Button:focus {
+    cursor: pointer;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.Button:active svg,
+.Button:focus svg {
+    filter: invert(1);
+}
+
+.MobileHeader {
+    display: none;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    background-color: var(--color-white);
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-8);
+    padding: var(--padding-16);
+    border-bottom: 1px solid var(--color-border);
+    width: 100dvw;
+}
+
+.RightPanel {
+    white-space: nowrap;
+    min-width: 20dvw;
+}
+
+.EmptyHeaderDiv {
+    visibility: hidden;
+}
+
+@media (max-width: 768px) {
+    .LeftPanel {
+        display: none;
+    }
+
+    .MobileHeader {
+        display: flex;
+    }
+
+    .DashboardMain {
+        flex-direction: column;
+    }
+
+    .Main {
+        padding-top: calc(var(--padding-16) + 60px);
+    }
+}
