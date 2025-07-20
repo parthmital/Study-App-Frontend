@@ -194,6 +194,16 @@ body {
     visibility: hidden;
 }
 
+.ThumbNail {
+    aspect-ratio: 16/9;
+    background-color: var(--color-border);
+    border-radius: var(--border-radius-8);
+}
+
+.Slides {
+    min-width: 20dvw;
+}
+
 @media (max-width: 768px) {
     .LeftPanel {
         display: none;
