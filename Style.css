@@ -205,6 +205,10 @@ body {
     min-width: 20dvw;
 }
 
+svg {
+    flex-shrink: 0;
+}
+
 @media (max-width: 768px) {
     .LeftPanel {
         display: none;
